@@ -6,7 +6,7 @@
 /*   By: daeidi-h <daeidi-h@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/29 15:20:50 by daeidi-h          #+#    #+#             */
-/*   Updated: 2021/08/09 09:02:38 by daeidi-h         ###   ########.fr       */
+/*   Updated: 2021/08/19 10:44:01 by daeidi-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,19 +23,14 @@
  * @param n 
  * @return void* 
  */
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char	*temp;
-	char	*d;
-	char	*s;
-
-	d = (char *)dest;
-	s = (char *)src;
-	temp = (char *) malloc(n * sizeof (char));
-	if (temp == NULL)
-		return (NULL);
-	ft_memcpy(temp, s, n);
-	ft_memcpy(d, temp, n);
-	free(temp);
-	return (dest);
+	if (dst > src)
+	{
+		while (len--)
+			((unsigned char *)dst)[len] = ((unsigned char *)src)[len];
+	}
+	if (dst < src)
+		ft_memcpy(dst, src, len);
+	return (dst);
 }
