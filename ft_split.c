@@ -6,12 +6,11 @@
 /*   By: daeidi-h <daeidi-h@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/29 15:20:50 by daeidi-h          #+#    #+#             */
-/*   Updated: 2021/08/19 10:11:00 by daeidi-h         ###   ########.fr       */
+/*   Updated: 2021/08/19 14:08:08 by daeidi-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 /**
  * @brief Allocates (with malloc(3)) and returns an array
  * of strings obtained by splitting ’s’ using the
