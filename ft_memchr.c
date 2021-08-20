@@ -6,7 +6,7 @@
 /*   By: daeidi-h <daeidi-h@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/29 15:20:50 by daeidi-h          #+#    #+#             */
-/*   Updated: 2021/08/20 09:57:38 by daeidi-h         ###   ########.fr       */
+/*   Updated: 2021/08/20 10:11:44 by daeidi-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,16 +22,16 @@
 */
 void	*ft_memchr(const void *s, int c, size_t n)
 {	
-	size_t	i;
-	char	*b;
+	size_t			i;
+	unsigned char	*b;
+	unsigned char	chr;
 
-	b = (char *)s;
+	b = (unsigned char *)s;
+	chr = (unsigned char) c;
 	i = 0;
-	while (c % 256 > 256)
-		c = c % 256;
 	while (i < n)
 	{
-		if (b[i] == c)
+		if (b[i] == chr)
 			return ((char *)s + i);
 		i++;
 	}
