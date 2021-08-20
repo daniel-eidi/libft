@@ -6,7 +6,7 @@
 /*   By: daeidi-h <daeidi-h@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/29 15:20:50 by daeidi-h          #+#    #+#             */
-/*   Updated: 2021/08/09 13:52:13 by daeidi-h         ###   ########.fr       */
+/*   Updated: 2021/08/20 14:30:21 by daeidi-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_strnstr(const char	*s1, const char *s2, size_t len)
 	size_t	j;
 
 	i = 0;
-	if (s1[0] == '\0' && s2[0] == '\0')
+	if (s2[0] == '\0')
 		return ((char *)s1);
 	while (s1[i] != '\0' && i < len)
 	{
