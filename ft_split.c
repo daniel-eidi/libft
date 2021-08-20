@@ -6,7 +6,7 @@
 /*   By: daeidi-h <daeidi-h@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/29 15:20:50 by daeidi-h          #+#    #+#             */
-/*   Updated: 2021/08/20 11:06:51 by daeidi-h         ###   ########.fr       */
+/*   Updated: 2021/08/20 12:09:33 by daeidi-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,6 @@ int	ft_countword(char const *s, char c)
 		}
 		i++;
 	}
-	if (ini != -1)
-		w++;
 	return (w);
 }
 
@@ -80,7 +78,9 @@ char	**ft_split(char const *s, char c)
 
 	if (!s || !c)
 		return (NULL);
-	str = malloc(sizeof(char *) * (ft_countword(s, c) + 1));
+	str = (char **) malloc(sizeof(char *) * (ft_countword(s, c) + 1));
+	if (!str)
+		return (NULL);
 	ft_insertword(s, c, str);
 	return (str);
 }
