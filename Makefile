@@ -6,7 +6,7 @@
 #    By: daeidi-h <daeidi-h@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/30 18:33:46 by pbie              #+#    #+#              #
-#    Updated: 2021/08/20 17:43:50 by daeidi-h         ###   ########.fr        #
+#    Updated: 2021/08/20 17:45:37 by daeidi-h         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,8 +46,8 @@ SRC =  ft_bzero.c \
 	  ft_tolower.c \
 	  ft_toupper.c \
 	  ft_calloc.c \
-	  ft_substr \
-	  ft_split \
+	  ft_substr.c \
+	  ft_split.c \
 
 
 OBJ = $(SRC:.c=.o)
