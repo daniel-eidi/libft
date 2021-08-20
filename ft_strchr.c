@@ -6,7 +6,7 @@
 /*   By: daeidi-h <daeidi-h@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/29 15:20:50 by daeidi-h          #+#    #+#             */
-/*   Updated: 2021/08/02 12:35:18 by daeidi-h         ###   ########.fr       */
+/*   Updated: 2021/08/20 10:25:08 by daeidi-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,18 @@
 
 char	*ft_strchr(const char *s, int c)
 {	
-	int	i;
+	int				i;
+	unsigned char	chr;
 
 	i = 0;
+	chr = (unsigned char) c;
 	while (s[i])
 	{
-		if (s[i] == c)
+		if (s[i] == chr)
 			return ((char *)s + i);
 		i++;
 	}
-	if (!c && s[i] == '\0')
+	if (!chr && s[i] == '\0')
 		return ((char *)s + i);
 	return (NULL);
 }
