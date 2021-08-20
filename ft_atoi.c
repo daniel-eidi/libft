@@ -6,7 +6,7 @@
 /*   By: daeidi-h <daeidi-h@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/29 18:10:53 by daeidi-h          #+#    #+#             */
-/*   Updated: 2021/08/09 15:32:52 by daeidi-h         ###   ########.fr       */
+/*   Updated: 2021/08/20 14:37:22 by daeidi-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@
  */
 int	ft_atoi(const char *str)
 {
-	long			nbr;
-	long			sign;
+	unsigned long	nbr;
+	unsigned long	sign;
 	unsigned int	i;
 
 	nbr = 0;
