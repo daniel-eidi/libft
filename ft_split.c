@@ -6,7 +6,7 @@
 /*   By: daeidi-h <daeidi-h@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/29 15:20:50 by daeidi-h          #+#    #+#             */
-/*   Updated: 2021/08/20 13:55:59 by daeidi-h         ###   ########.fr       */
+/*   Updated: 2021/08/20 19:43:33 by daeidi-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
  * @param c 
  * @return char** 
  */
-int	ft_countword(char const *s, char c)
+static int	ft_countword(char const *s, char c)
 {
 	int			i;
 	int			w;
@@ -46,7 +46,7 @@ int	ft_countword(char const *s, char c)
 	return (w);
 }
 
-void	ft_insertword(char const *s, char c, char **str)
+static void	ft_insertword(char const *s, char c, char **str)
 {
 	int			i;
 	int			nstr;

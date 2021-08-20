@@ -6,7 +6,7 @@
 /*   By: daeidi-h <daeidi-h@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/29 15:20:50 by daeidi-h          #+#    #+#             */
-/*   Updated: 2021/08/19 19:54:15 by daeidi-h         ###   ########.fr       */
+/*   Updated: 2021/08/20 19:41:41 by daeidi-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,21 +35,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	newstring = ft_substr((char *)s1, 0, size_s + 1);
 	return (newstring);
 }
-
-// char	*ft_strtrim(char const *s1, char const *set)
-// {
-// 	char		*str;
-// 	size_t		start;
-// 	size_t		end;
-
-// 	if (!s1 || !set)
-// 		return (NULL);
-// 	start = 0;
-// 	while (s1[start] && ft_strchr(set, s1[start]))
-// 		start++;
-// 	end = ft_strlen(s1);
-// 	while (end && ft_strchr(set, s1[end]))
-// 		end--;
-// 	str = ft_substr(s1, start, end - start + 1);
-// 	return (str);
-// }

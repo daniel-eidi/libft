@@ -6,13 +6,13 @@
 /*   By: daeidi-h <daeidi-h@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/29 15:20:50 by daeidi-h          #+#    #+#             */
-/*   Updated: 2021/08/13 20:28:18 by daeidi-h         ###   ########.fr       */
+/*   Updated: 2021/08/20 19:44:15 by daeidi-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_numdec(unsigned int i)
+static int	ft_numdec(unsigned int i)
 {
 	unsigned int	count;
 
