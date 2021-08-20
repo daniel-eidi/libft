@@ -6,7 +6,7 @@
 #    By: daeidi-h <daeidi-h@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/30 18:33:46 by pbie              #+#    #+#              #
-#    Updated: 2021/08/20 17:42:42 by daeidi-h         ###   ########.fr        #
+#    Updated: 2021/08/20 17:43:50 by daeidi-h         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,6 @@ SRC =  ft_bzero.c \
 	  ft_putnbr_fd.c \
 	  ft_putstr_fd.c \
 	  ft_strchr.c \
-	  ft_strcpy.c \
 	  ft_strdup.c \
 	  ft_striteri.c \
 	  ft_strjoin.c \
