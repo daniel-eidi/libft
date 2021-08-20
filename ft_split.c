@@ -6,7 +6,7 @@
 /*   By: daeidi-h <daeidi-h@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/29 15:20:50 by daeidi-h          #+#    #+#             */
-/*   Updated: 2021/08/20 12:09:33 by daeidi-h         ###   ########.fr       */
+/*   Updated: 2021/08/20 13:55:59 by daeidi-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,10 +75,12 @@ void	ft_insertword(char const *s, char c, char **str)
 char	**ft_split(char const *s, char c)
 {
 	char		**str;
+	int			words;
 
-	if (!s || !c)
+	if (!s)
 		return (NULL);
-	str = (char **) malloc(sizeof(char *) * (ft_countword(s, c) + 1));
+	words = ft_countword(s, c);
+	str = (char **) malloc(sizeof(char *) * (words + 1));
 	if (!str)
 		return (NULL);
 	ft_insertword(s, c, str);
