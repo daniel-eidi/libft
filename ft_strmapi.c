@@ -6,7 +6,7 @@
 /*   By: daeidi-h <daeidi-h@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/14 15:36:33 by daeidi-h          #+#    #+#             */
-/*   Updated: 2021/08/14 17:00:34 by daeidi-h         ###   ########.fr       */
+/*   Updated: 2021/08/20 11:21:46 by daeidi-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	i = 0;
 	if (!s || !f)
 		return (NULL);
-	str = (char *)calloc(sizeof(char), ft_strlen(s) + 1);
+	str = (char *)ft_calloc(sizeof(char), ft_strlen(s) + 1);
 	while (s[i] != '\0')
 	{
 		str[i] = f(i, s[i]);
