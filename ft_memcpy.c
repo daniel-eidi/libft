@@ -6,7 +6,7 @@
 /*   By: daeidi-h <daeidi-h@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/29 15:20:50 by daeidi-h          #+#    #+#             */
-/*   Updated: 2021/08/03 19:04:13 by daeidi-h         ###   ########.fr       */
+/*   Updated: 2021/08/20 14:08:43 by daeidi-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	char	*cp;
 	char	*ori;
 
+	if (dest == NULL && src == NULL)
+		return (NULL);
 	ori = (char *)src;
 	cp = (char *)dest;
 	i = 0;
