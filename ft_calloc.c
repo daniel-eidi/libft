@@ -6,7 +6,7 @@
 /*   By: daeidi-h <daeidi-h@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/09 15:40:04 by daeidi-h          #+#    #+#             */
-/*   Updated: 2021/08/14 15:46:43 by daeidi-h         ###   ########.fr       */
+/*   Updated: 2021/08/20 14:50:08 by daeidi-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*mem;
 
-	if (!nmemb || !size)
+	if (!nmemb || size <= 0)
 		return (NULL);
 	mem = malloc (nmemb * size);
 	if (mem == NULL)
