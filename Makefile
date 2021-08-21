@@ -6,7 +6,7 @@
 #    By: daeidi-h <daeidi-h@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/30 18:33:46 by pbie              #+#    #+#              #
-#    Updated: 2021/08/21 09:46:11 by daeidi-h         ###   ########.fr        #
+#    Updated: 2021/08/21 11:02:54 by daeidi-h         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,11 +25,11 @@ OBJS = $(SRCS:.c=.o)
 
 NAME = libft.a
 
-MAIN = main.c
+#MAIN = main.c
 
-OBJ_MAIN = $(MAIN:.c=.o)
+#OBJ_MAIN = $(MAIN:.c=.o)
 
-TEST = test
+#TEST = test
 
 CC = clang
 RM = rm -f
@@ -37,7 +37,7 @@ CCLIB = ar rcs
 
 CFLAGS = -Wall -Wextra -Werror
 
-LFLAGS = -L. -lft
+#LFLAGS = -L. -lft
 
 .c.o:
 	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
@@ -47,9 +47,9 @@ $(NAME): $(OBJS)
 
 all: $(NAME)
 
-main: $(OBJS) $(OBJ_MAIN)
-	$(CC) $(CFLAGS) -o $(TEST) $(OBJ_MAIN) $(LFLAGS) -lbsd
-	./$(TEST)
+# main: $(OBJS) $(OBJ_MAIN)
+# 	$(CC) $(CFLAGS) -o $(TEST) $(OBJ_MAIN) $(LFLAGS) -lbsd
+# 	./$(TEST)
 
 clean:
 	$(RM) $(OBJS) $(OBJ_MAIN)
