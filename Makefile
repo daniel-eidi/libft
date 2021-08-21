@@ -6,13 +6,9 @@
 #    By: daeidi-h <daeidi-h@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/30 18:33:46 by pbie              #+#    #+#              #
-#    Updated: 2021/08/20 17:45:37 by daeidi-h         ###   ########.fr        #
+#    Updated: 2021/08/21 08:35:09 by daeidi-h         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
-FLAG = -Wall -Wextra -Werror
-
-NAME = libft.a
 
 SRC =  ft_bzero.c \
 	  ft_isalnum.c \
@@ -49,28 +45,30 @@ SRC =  ft_bzero.c \
 	  ft_substr.c \
 	  ft_split.c \
 
+OBJS = $(SRCS:.c=.o)
 
-OBJ = $(SRC:.c=.o)
+NAME = libft.a
+
+CC = clang
+RM = rm -f
+CCLIB = ar rcs
+
+CFLAGS = -Wall -Wextra -Werror
+
+.c.o:
+	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
+
+$(NAME): $(OBJS)
+	$(CCLIB) $(NAME) $(OBJS)
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	@ar rc $(NAME) $(OBJ)
-	@echo "$(NAME) created"
-	@ranlib $(NAME)
-	@echo "$(NAME) indexed"
-
-%.o: %.c
-	@gcc $(FLAG) -c $< -o $@
-
 clean:
-	@rm -f $(OBJ)
-	@echo "OBJ deleted"
+	$(RM) $(OBJS)
 
 fclean: clean
-	@rm -f $(NAME)
-	@echo "$(NAME) deleted"
+	$(RM) $(NAME)
 
 re: fclean all
 
-.PHONY: all, clean, fclean, re
+.PHONY: all clean fclean re run
