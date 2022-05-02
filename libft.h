@@ -6,12 +6,16 @@
 /*   By: daeidi-h <daeidi-h@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 10:17:53 by daeidi-h          #+#    #+#             */
-/*   Updated: 2021/08/20 10:18:13 by daeidi-h         ###   ########.fr       */
+/*   Updated: 2022/05/02 17:55:39 by daeidi-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1000
+# endif
 
 # include <string.h>
 # include <unistd.h>
@@ -52,4 +56,10 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
+int					ft_atoi_base(char *str, char *base);
+
+/*new functions*/
+int					ft_countword(char const *s, char c);
+char				*ft_get_next_line(int fd);
+
 #endif
